@@ -1,0 +1,242 @@
+[
+  {
+    "id": "ramen_shoyu",
+    "name": "醤油ラーメン",
+    "emoji": "🍜",
+    "volume": "がっつり",
+    "temperature": "温かい",
+    "genre": "中",
+    "mealTimes": ["lunch", "dinner"],
+    "searchKeyword": "ラーメン"
+  },
+  {
+    "id": "ramen_tonkotsu",
+    "name": "豚骨ラーメン",
+    "emoji": "🍜",
+    "volume": "がっつり",
+    "temperature": "温かい",
+    "genre": "中",
+    "mealTimes": ["lunch", "dinner"],
+    "searchKeyword": "豚骨ラーメン"
+  },
+  {
+    "id": "soba_zaru",
+    "name": "ざるそば",
+    "emoji": "🥢",
+    "volume": "軽め",
+    "temperature": "冷たい",
+    "genre": "和",
+    "mealTimes": ["lunch", "dinner"],
+    "searchKeyword": "そば"
+  },
+  {
+    "id": "udon_kake",
+    "name": "かけうどん",
+    "emoji": "🍲",
+    "volume": "軽め",
+    "temperature": "温かい",
+    "genre": "和",
+    "mealTimes": ["breakfast", "lunch", "dinner"],
+    "searchKeyword": "うどん"
+  },
+  {
+    "id": "sushi",
+    "name": "お寿司",
+    "emoji": "🍣",
+    "volume": "がっつり",
+    "temperature": "冷たい",
+    "genre": "和",
+    "mealTimes": ["lunch", "dinner"],
+    "searchKeyword": "寿司"
+  },
+  {
+    "id": "tempura_don",
+    "name": "天丼",
+    "emoji": "🍤",
+    "volume": "がっつり",
+    "temperature": "温かい",
+    "genre": "和",
+    "mealTimes": ["lunch", "dinner"],
+    "searchKeyword": "天丼"
+  },
+  {
+    "id": "yakiniku",
+    "name": "焼肉",
+    "emoji": "🥩",
+    "volume": "がっつり",
+    "temperature": "温かい",
+    "genre": "和",
+    "mealTimes": ["dinner"],
+    "searchKeyword": "焼肉"
+  },
+  {
+    "id": "curry",
+    "name": "カレーライス",
+    "emoji": "🍛",
+    "volume": "がっつり",
+    "temperature": "温かい",
+    "genre": "アジア",
+    "mealTimes": ["lunch", "dinner"],
+    "searchKeyword": "カレー"
+  },
+  {
+    "id": "pho",
+    "name": "フォー",
+    "emoji": "🍜",
+    "volume": "軽め",
+    "temperature": "温かい",
+    "genre": "アジア",
+    "mealTimes": ["lunch", "dinner"],
+    "searchKeyword": "フォー ベトナム料理"
+  },
+  {
+    "id": "pad_thai",
+    "name": "パッタイ",
+    "emoji": "🍝",
+    "volume": "がっつり",
+    "temperature": "温かい",
+    "genre": "アジア",
+    "mealTimes": ["lunch", "dinner"],
+    "searchKeyword": "タイ料理"
+  },
+  {
+    "id": "hamburger",
+    "name": "ハンバーガー",
+    "emoji": "🍔",
+    "volume": "がっつり",
+    "temperature": "温かい",
+    "genre": "洋",
+    "mealTimes": ["lunch", "dinner"],
+    "searchKeyword": "ハンバーガー"
+  },
+  {
+    "id": "pasta_tomato",
+    "name": "トマトパスタ",
+    "emoji": "🍝",
+    "volume": "がっつり",
+    "temperature": "温かい",
+    "genre": "洋",
+    "mealTimes": ["lunch", "dinner"],
+    "searchKeyword": "イタリアン パスタ"
+  },
+  {
+    "id": "pizza",
+    "name": "ピザ",
+    "emoji": "🍕",
+    "volume": "がっつり",
+    "temperature": "温かい",
+    "genre": "洋",
+    "mealTimes": ["lunch", "dinner"],
+    "searchKeyword": "ピザ"
+  },
+  {
+    "id": "salad_bowl",
+    "name": "サラダボウル",
+    "emoji": "🥗",
+    "volume": "軽め",
+    "temperature": "冷たい",
+    "genre": "洋",
+    "mealTimes": ["breakfast", "lunch"],
+    "searchKeyword": "サラダ デリ"
+  },
+  {
+    "id": "gyoza",
+    "name": "餃子定食",
+    "emoji": "🥟",
+    "volume": "がっつり",
+    "temperature": "温かい",
+    "genre": "中",
+    "mealTimes": ["lunch", "dinner"],
+    "searchKeyword": "餃子 中華"
+  },
+  {
+    "id": "mapo",
+    "name": "麻婆豆腐",
+    "emoji": "🌶️",
+    "volume": "がっつり",
+    "temperature": "温かい",
+    "genre": "中",
+    "mealTimes": ["lunch", "dinner"],
+    "searchKeyword": "中華"
+  },
+  {
+    "id": "onigiri",
+    "name": "おにぎり",
+    "emoji": "🍙",
+    "volume": "軽め",
+    "temperature": "冷たい",
+    "genre": "和",
+    "mealTimes": ["breakfast", "lunch"],
+    "searchKeyword": "おにぎり"
+  },
+  {
+    "id": "tamagokake",
+    "name": "卵かけご飯",
+    "emoji": "🍳",
+    "volume": "軽め",
+    "temperature": "温かい",
+    "genre": "和",
+    "mealTimes": ["breakfast"],
+    "searchKeyword": "定食"
+  },
+  {
+    "id": "pancake",
+    "name": "パンケーキ",
+    "emoji": "🥞",
+    "volume": "軽め",
+    "temperature": "温かい",
+    "genre": "洋",
+    "mealTimes": ["breakfast", "lunch"],
+    "searchKeyword": "パンケーキ カフェ"
+  },
+  {
+    "id": "granola",
+    "name": "グラノーラ",
+    "emoji": "🥣",
+    "volume": "軽め",
+    "temperature": "冷たい",
+    "genre": "洋",
+    "mealTimes": ["breakfast"],
+    "searchKeyword": "カフェ"
+  },
+  {
+    "id": "reimen",
+    "name": "冷麺",
+    "emoji": "🍜",
+    "volume": "軽め",
+    "temperature": "冷たい",
+    "genre": "アジア",
+    "mealTimes": ["lunch", "dinner"],
+    "searchKeyword": "冷麺 韓国料理"
+  },
+  {
+    "id": "bibimbap",
+    "name": "ビビンバ",
+    "emoji": "🥘",
+    "volume": "がっつり",
+    "temperature": "温かい",
+    "genre": "アジア",
+    "mealTimes": ["lunch", "dinner"],
+    "searchKeyword": "韓国料理"
+  },
+  {
+    "id": "steak",
+    "name": "ステーキ",
+    "emoji": "🥩",
+    "volume": "がっつり",
+    "temperature": "温かい",
+    "genre": "洋",
+    "mealTimes": ["dinner"],
+    "searchKeyword": "ステーキ"
+  },
+  {
+    "id": "oden",
+    "name": "おでん",
+    "emoji": "🍢",
+    "volume": "軽め",
+    "temperature": "温かい",
+    "genre": "和",
+    "mealTimes": ["dinner"],
+    "searchKeyword": "おでん 居酒屋"
+  }
+]
