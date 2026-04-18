@@ -19,7 +19,7 @@ struct MoodPickerView: View {
                 }
             }
 
-            NyashefBubble(message: NyashefDialog.greeting(for: mealTime))
+            MessageBanner(text: Messages.greeting(for: mealTime))
 
             axisPicker(title: "ボリューム", selection: $mood.volume, options: Volume.allCases)
             axisPicker(title: "温度", selection: $mood.temperature, options: Temperature.allCases)
@@ -34,6 +34,7 @@ struct MoodPickerView: View {
                     .foregroundStyle(.white)
                     .clipShape(RoundedRectangle(cornerRadius: 14))
             }
+            .sensoryFeedback(.impact, trigger: mood)
         }
         .padding()
     }

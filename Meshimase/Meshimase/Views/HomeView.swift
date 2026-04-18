@@ -58,12 +58,12 @@ struct HomeView: View {
                 }
             }
         }
-        .alert(NyashefDialog.preChargeTitle, isPresented: $showPreChargeAlert) {
+        .alert(Messages.preChargeTitle, isPresented: $showPreChargeAlert) {
             Button("やめておく", role: .cancel) {}
-            Button("100円払う") { Task { await payAndReroll() } }
-            Button("月額480円で聞き放題") { showPaywall = true }
+            Button("100円で 1回") { Task { await payAndReroll() } }
+            Button("月額 480円で聞き放題") { showPaywall = true }
         } message: {
-            Text(NyashefDialog.preChargeMessage)
+            Text(Messages.preChargeMessage)
         }
         .sheet(isPresented: $showPaywall) {
             PaywallView(wallet: wallet) {

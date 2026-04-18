@@ -8,9 +8,11 @@ struct PaywallView: View {
 
     var body: some View {
         VStack(spacing: 20) {
-            Text("🐱‍🍳").font(.system(size: 72))
-            Text("悩むなら、聞き放題めしませ").font(.title2).bold()
-            Text("月額480円で、決断料なしでガチャ回し放題。いつでも解約できるめし。")
+            Image(systemName: "infinity.circle.fill")
+                .font(.system(size: 72))
+                .foregroundStyle(.orange)
+            Text(Messages.paywallTitle).font(.title2).bold()
+            Text(Messages.paywallBody)
                 .multilineTextAlignment(.center)
                 .foregroundStyle(.secondary)
                 .padding(.horizontal)
@@ -25,7 +27,7 @@ struct PaywallView: View {
             }
 
             Button(action: purchase) {
-                Text(isPurchasing ? "処理中めし…" : "加入する")
+                Text(isPurchasing ? "処理中…" : "加入する")
                     .font(.headline)
                     .frame(maxWidth: .infinity).padding()
                     .background(Color.orange)

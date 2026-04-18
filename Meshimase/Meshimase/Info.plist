@@ -15,7 +15,7 @@
     <key>LSRequiresIPhoneOS</key>
     <true/>
     <key>NSLocationWhenInUseUsageDescription</key>
-    <string>あなたの近くのお店を提案するために使うめしませ。</string>
+    <string>あなたの近くのお店を提案するために使います。</string>
     <key>UILaunchScreen</key>
     <dict/>
     <key>UIRequiredDeviceCapabilities</key>

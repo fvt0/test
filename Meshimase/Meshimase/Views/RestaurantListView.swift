@@ -10,7 +10,7 @@ struct RestaurantListView: View {
 
     var body: some View {
         VStack(alignment: .leading, spacing: 16) {
-            NyashefBubble(message: NyashefDialog.confirmedComment)
+            MessageBanner(text: Messages.confirmedComment)
 
             HStack {
                 Text(meal.emoji).font(.largeTitle)
@@ -19,12 +19,12 @@ struct RestaurantListView: View {
             }
 
             if isLoading {
-                ProgressView("お店を探しているめし…")
+                ProgressView("お店を探しています…")
                     .frame(maxWidth: .infinity, minHeight: 120)
             } else if let errorMessage {
                 Text(errorMessage).foregroundStyle(.secondary)
             } else if restaurants.isEmpty {
-                Text("近くにお店が見つからないめし…").foregroundStyle(.secondary)
+                Text("近くにお店が見つかりませんでした。").foregroundStyle(.secondary)
             } else {
                 List(restaurants) { r in
                     Button { openInMaps(r) } label: {

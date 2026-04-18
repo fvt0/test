@@ -70,7 +70,7 @@ final class TicketWallet {
     }
 
     private func purchase(product: Product?) async -> PurchaseOutcome {
-        guard let product else { return .failed("商品読み込み中めしませ") }
+        guard let product else { return .failed("商品読み込み中です") }
         do {
             let result = try await product.purchase()
             switch result {
@@ -80,13 +80,13 @@ final class TicketWallet {
                     await refreshSubscriptionStatus()
                     return .success
                 }
-                return .failed("検証失敗めし")
+                return .failed("購入の検証に失敗しました")
             case .userCancelled:
                 return .cancelled
             case .pending:
-                return .failed("承認待ちめし")
+                return .failed("承認待ちです")
             @unknown default:
-                return .failed("不明な結果めし")
+                return .failed("不明な結果です")
             }
         } catch {
             return .failed(error.localizedDescription)

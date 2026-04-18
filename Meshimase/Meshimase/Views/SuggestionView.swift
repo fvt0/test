@@ -10,19 +10,24 @@ struct SuggestionView: View {
 
     var body: some View {
         VStack(spacing: 20) {
-            NyashefBubble(
-                message: meal == nil
-                    ? NyashefDialog.noCandidateComment
-                    : NyashefDialog.suggestionComment(rollCount: rollCount),
+            MessageBanner(
+                text: meal == nil
+                    ? Messages.noCandidateComment
+                    : Messages.suggestionComment(rollCount: rollCount),
                 emphasize: rollCount >= 3
             )
 
             if let meal {
                 mealCard(meal)
+                    .id(meal.id)
+                    .transition(.asymmetric(
+                        insertion: .scale(scale: 0.85).combined(with: .opacity),
+                        removal: .opacity
+                    ))
             }
 
             if hasSubscription {
-                Label(NyashefDialog.subscriptionBadge, systemImage: "infinity")
+                Label(Messages.subscriptionBadge, systemImage: "infinity")
                     .font(.caption).foregroundStyle(.orange)
             }
 
@@ -36,7 +41,7 @@ struct SuggestionView: View {
                     VStack(spacing: 2) {
                         Text("別のを見る")
                         if rollCount >= 2 && !hasSubscription {
-                            Text(rollCount >= 2 ? "次は100円" : "")
+                            Text("次は 100円")
                                 .font(.caption2)
                                 .foregroundStyle(.secondary)
                         }
@@ -59,6 +64,8 @@ struct SuggestionView: View {
             .disabled(meal == nil)
         }
         .padding()
+        .animation(.spring(response: 0.45, dampingFraction: 0.7), value: meal?.id)
+        .sensoryFeedback(.selection, trigger: meal?.id)
     }
 
     private func mealCard(_ meal: Meal) -> some View {
