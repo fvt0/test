@@ -8,8 +8,10 @@
 MVP 実装中（SwiftUI / iOS 17+）
 
 ## ドキュメント
+- `OVERVIEW.md` - **サービス概要**（最初に読む）
 - `SPEC.md` - 機能仕様書
 - `CHARACTER.md` - キャラクター（ニャシェフ）設計書／画像生成プロンプト
+- `mockups/index.html` - 画面モックアップ（ブラウザで開く）
 
 ## 構成
 - `Meshimase/` - iOS アプリソース（SwiftUI）
