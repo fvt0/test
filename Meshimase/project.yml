@@ -1,0 +1,46 @@
+name: Meshimase
+options:
+  bundleIdPrefix: com.meshimase
+  deploymentTarget:
+    iOS: "17.0"
+  createIntermediateGroups: true
+  groupSortPosition: top
+  generateEmptyDirectories: true
+
+settings:
+  base:
+    SWIFT_VERSION: "5.9"
+    IPHONEOS_DEPLOYMENT_TARGET: "17.0"
+    CODE_SIGN_STYLE: Automatic
+    DEVELOPMENT_TEAM: "" # TODO: Apple Developer Team ID に置換
+    MARKETING_VERSION: "0.1.0"
+    CURRENT_PROJECT_VERSION: "1"
+    ENABLE_USER_SCRIPT_SANDBOXING: YES
+
+targets:
+  Meshimase:
+    type: application
+    platform: iOS
+    deploymentTarget: "17.0"
+    sources:
+      - path: Meshimase
+        excludes:
+          - "Info.plist"
+    resources:
+      - path: Meshimase/Resources
+    info:
+      path: Meshimase/Info.plist
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.meshimase.app
+        INFOPLIST_FILE: Meshimase/Info.plist
+        ASSETCATALOG_COMPILER_APPICON_NAME: AppIcon
+        ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME: AccentColor
+        TARGETED_DEVICE_FAMILY: "1,2"
+        GENERATE_INFOPLIST_FILE: NO
+        ENABLE_PREVIEWS: YES
+        SUPPORTS_MACCATALYST: NO
+    dependencies:
+      - sdk: StoreKit.framework
+      - sdk: MapKit.framework
+      - sdk: CoreLocation.framework

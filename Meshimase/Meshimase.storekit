@@ -1,0 +1,74 @@
+{
+  "identifier" : "meshimase-storekit-config",
+  "nonRenewingSubscriptions" : [],
+  "products" : [
+    {
+      "displayPrice" : "100",
+      "familyShareable" : false,
+      "internalID" : "ticket.single.001",
+      "localizations" : [
+        {
+          "description" : "3回目以降のごはん再提案を1回分ご利用いただけます。",
+          "displayName" : "決断チケット",
+          "locale" : "ja_JP"
+        }
+      ],
+      "productID" : "com.meshimase.ticket.single",
+      "referenceName" : "Decision Ticket (Single)",
+      "type" : "Consumable"
+    }
+  ],
+  "settings" : {
+    "_applicationInternalID" : "meshimase",
+    "_developerTeamID" : "",
+    "_failTransactionsEnabled" : false,
+    "_lastSynchronizedDate" : 1737100800,
+    "_locale" : "ja_JP",
+    "_storefront" : "JPN",
+    "_storeKitErrors" : []
+  },
+  "subscriptionGroups" : [
+    {
+      "id" : "decision-unlimited",
+      "localizations" : [
+        {
+          "description" : "決断料なしで回し放題",
+          "displayName" : "聞き放題プラン",
+          "locale" : "ja_JP"
+        }
+      ],
+      "name" : "Decision Unlimited",
+      "subscriptions" : [
+        {
+          "adHocOffers" : [],
+          "codeOffers" : [],
+          "displayPrice" : "480",
+          "familyShareable" : false,
+          "groupNumber" : 1,
+          "internalID" : "sub.monthly.001",
+          "introductoryOffer" : {
+            "internalID" : "intro.free.3days",
+            "paymentMode" : "free",
+            "subscriptionPeriod" : "P3D"
+          },
+          "localizations" : [
+            {
+              "description" : "3回目以降のごはん再提案が無制限でご利用いただけます。月額 480円（初回3日間無料）。",
+              "displayName" : "聞き放題プラン（月額）",
+              "locale" : "ja_JP"
+            }
+          ],
+          "productID" : "com.meshimase.subscription.monthly",
+          "recurringSubscriptionPeriod" : "P1M",
+          "referenceName" : "Unlimited Monthly",
+          "subscriptionGroupID" : "decision-unlimited",
+          "type" : "RecurringSubscription"
+        }
+      ]
+    }
+  ],
+  "version" : {
+    "major" : 3,
+    "minor" : 0
+  }
+}
