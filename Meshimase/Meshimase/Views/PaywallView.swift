@@ -2,6 +2,7 @@ import SwiftUI
 
 struct PaywallView: View {
     let wallet: TicketWallet
+    let analytics: AnalyticsService
     let onDone: () -> Void
     @State private var isPurchasing = false
     @State private var errorText: String?
@@ -45,13 +46,29 @@ struct PaywallView: View {
         Task {
             isPurchasing = true
             defer { isPurchasing = false }
+            analytics.track(.purchaseStarted(
+                productID: TicketWallet.subscriptionProductID,
+                source: .paywall
+            ))
             let outcome = await wallet.purchaseSubscription()
             switch outcome {
             case .success:
+                analytics.track(.purchaseCompleted(
+                    productID: TicketWallet.subscriptionProductID,
+                    source: .paywall
+                ))
                 onDone()
             case .cancelled:
-                break
+                analytics.track(.purchaseCancelled(
+                    productID: TicketWallet.subscriptionProductID,
+                    source: .paywall
+                ))
             case .failed(let msg):
+                analytics.track(.purchaseFailed(
+                    productID: TicketWallet.subscriptionProductID,
+                    source: .paywall,
+                    reason: msg
+                ))
                 errorText = msg
             }
         }

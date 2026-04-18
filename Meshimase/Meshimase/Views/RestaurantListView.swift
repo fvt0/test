@@ -7,6 +7,7 @@ struct RestaurantListView: View {
     let isLoading: Bool
     let errorMessage: String?
     let onBack: () -> Void
+    let onOpenRestaurant: (Restaurant, Int) -> Void
 
     var body: some View {
         VStack(alignment: .leading, spacing: 16) {
@@ -26,8 +27,11 @@ struct RestaurantListView: View {
             } else if restaurants.isEmpty {
                 Text("近くにお店が見つかりませんでした。").foregroundStyle(.secondary)
             } else {
-                List(restaurants) { r in
-                    Button { openInMaps(r) } label: {
+                List(Array(restaurants.enumerated()), id: \.element.id) { index, r in
+                    Button {
+                        onOpenRestaurant(r, index)
+                        openInMaps(r)
+                    } label: {
                         VStack(alignment: .leading, spacing: 4) {
                             Text(r.name).font(.headline)
                             if let d = r.distanceMeters {
