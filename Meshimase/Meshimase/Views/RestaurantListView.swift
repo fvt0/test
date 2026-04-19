@@ -27,20 +27,20 @@ struct RestaurantListView: View {
             } else if restaurants.isEmpty {
                 Text("近くにお店が見つかりませんでした。").foregroundStyle(.secondary)
             } else {
-                List(Array(restaurants.enumerated()), id: \.element.id) { index, r in
+                List(Array(restaurants.enumerated()), id: \.element.id) { pair in
                     Button {
-                        onOpenRestaurant(r, index)
-                        openInMaps(r)
+                        onOpenRestaurant(pair.element, pair.offset)
+                        openInMaps(pair.element)
                     } label: {
                         VStack(alignment: .leading, spacing: 4) {
-                            Text(r.name).font(.headline)
-                            if let d = r.distanceMeters {
+                            Text(pair.element.name).font(.headline)
+                            if let d = pair.element.distanceMeters {
                                 Text(formatDistance(d))
                                     .font(.caption)
                                     .foregroundStyle(.secondary)
                             }
-                            if !r.address.isEmpty {
-                                Text(r.address).font(.caption2).foregroundStyle(.secondary)
+                            if !pair.element.address.isEmpty {
+                                Text(pair.element.address).font(.caption2).foregroundStyle(.secondary)
                             }
                         }
                     }
